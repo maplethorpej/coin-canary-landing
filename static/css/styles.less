@@ -23,6 +23,7 @@ p {
 
 .top {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1768ac+0,03256c+100 */
+    padding: 0 20px;
     background: #1768ac; /* Old browsers */
     background: -moz-linear-gradient(-45deg, #1768ac 0%, #03256c 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(-45deg, #1768ac 0%, #03256c 100%); /* Chrome10-25,Safari5.1-6 */
@@ -33,7 +34,7 @@ p {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        margin-bottom: 50px;
+        margin-bottom: 100px;
 
         .logo {
             max-width: 160px;
@@ -49,11 +50,15 @@ p {
             font-size: 14px;
             font-weight: 300;
             text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 
     .introduction {
-        width: 960px;
+        max-width: 960px;
         margin: 0 auto;
         padding: 20px 0 200px;
         color: #fff;
@@ -160,3 +165,48 @@ p {
     }
 }
 
+@media screen and (max-width: 760px) {
+
+    .top {
+        header {
+            display: block;
+            text-align: center;
+            margin-bottom: 50px;
+
+            .logo {
+                margin: 0 auto;
+            }
+        }
+
+        .introduction {
+            padding-bottom: 40px;
+
+            h1, p {
+                text-align: center;
+            }
+        }
+
+        .mid {
+            display: block;
+
+            .left {
+                width: 100%;
+            }
+
+            .right {
+                width: 100%;
+            }
+
+            h3 {
+                text-align: center;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                list-style: none;
+            }
+        }
+    }
+}
